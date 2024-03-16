@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 100vw;
+    height: 450px;
+    border-bottom:  15px solid rgb(22, 144, 22);
+    margin: 30px auto;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    position: relative;
+    overflow: hidden;
+}
+
+.button {
+    width: 80%;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.jogar {
+    width: 20%;
+    padding: 5px 0;
+    cursor: pointer;
+    border: none;
+    background-color: green;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: 800ms;
+    text-transform: uppercase;
+}
+
+.container-contagem {
+    
+}
+
+.contagem {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.clouds {
+    position: absolute;
+    top: 100px;
+    width: 150px;
+    animation: clouds 10s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+}
+
+.pular {
+    animation: mario 500ms infinite ease-out;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe 3000ms infinite linear;
+}
+
+/* animações */
+
+@keyframes clouds {
+    from {
+        right: -150px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pipe {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario {
+    0% {
+        bottom: 0;
+    }
+
+    30% {
+        bottom: 130px;
+    }
+
+    40% {
+        bottom: 140px;
+    }
+
+    50% {
+        bottom: 140px;
+    }
+
+    60% {
+        bottom: 140px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
